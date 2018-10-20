@@ -13,12 +13,12 @@ unirest.get("https://devru-instructables.p.mashape.com/json-api/getCategories")
     .header("Accept", "application/json")
     .end(function (result) {
         var categories = result.body;
-        console.log(categories.workshop);
+        console.log(categories);
     });
 app.get('/', (req, res) => {
     res.send("hello world");
 });
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => {
-//     console.log(`Listening on port: ${port}`);
-// });
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Listening on port: ${port}`);
+});
