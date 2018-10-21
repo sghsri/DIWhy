@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 var request = require('request');
 const apiKEY = "NchdEVDYyvmshQWZFToOl688Ib07p1tO5pPjsn0Rzzw9xT9IxG";
+const cheerio = require('cheerio');
+
 var options = {
     url: 'https://www.reddit.com/r/funny.json',
     method: 'GET',
@@ -10,7 +12,6 @@ var options = {
         "X-Mashape-Key": apiKEY
     }
 };
-const cheerio = require('cheerio');
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
