@@ -52,7 +52,7 @@ app.get('/search/catg/:catg', (req, res) => {
             var title = $(elem).find('.title').text();
             var id = title.replace(/\s/g, '-');
             var link = `https://www.instructables.com${$(elem).find('.title>a').attr('href')}`;
-            links.push({
+            data.push({
                 "title": title,
                 "id": id,
                 "link": link
