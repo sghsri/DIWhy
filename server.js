@@ -91,6 +91,9 @@ function getIndividualData(id) {
             console.log(body);
             try {
                 var json = JSON.parse(body);
+                let materials = [];
+                //parse from the steps
+                json.materials = materials;
                 resolve(json);
             } catch (err) {
                 reject(err);
